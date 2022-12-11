@@ -1,12 +1,13 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 html{
     font-size: 100%;
 }
 body{
-    font-family: "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic;
+    font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.7;
-    color: #432;
+    color: rgb(0, 0, 0);
 }
 a{
     text-decoration: none;
@@ -15,16 +16,16 @@ img{
     max-width: 100%;
 }
 
-.logo{
-    width: 210px;
-    margin-top: 14px;
-}
+/* header */
 .main-nav{
-    display: flex; /*수평 정렬*/
-    font-size: 1.25rem;
+    display: flex;
+    font-size: 1rem;
     text-transform: uppercase;
     margin-top: 34px;
     list-style: none;
+
+    position: absolute;
+    right: 100px;
 }
 .main-nav li{
     margin-left: 36px;
@@ -32,51 +33,127 @@ img{
 .main-nav a{
     color: #432;
 }
-.main-nav a:hover{ /*가상 클래스: 마우스 올렸을때*/
+.main-nav a:hover{
     color: #0bd;
 }
-.page-header{
-    display: flex;
-    justify-content: space-between; /*양 끝에 배치*/
-}
-.wrapper{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 4%;
-}
-.home-contant{
-    text-align: center; /*중앙 배치*/
-    margin-top: 10%;
-}
-.home-contant p{
-    font-size: 1.125rem;
-    margin: 10px 0 42px;
-}
 .page-title{
-    font-size: 5rem;
-    font-family: NanumGothic, serif;
-    text-transform: uppercase;
-    font-weight: normal;
+    text-align: center;
+    position: relative;
+    color: #0123b4;
+    font-size: 3rem;
+    top: 60px;
 }
-.button{
-    font-size: 1.375rem;
-    background: #0bd;
+#header{
+    background-image: url(../images/icon.png);
+    background-color: #0bd;
+    height: 200px;
+}
+
+/* footer */
+footer {
+    background: #432;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 500px;
+}
+footer p{
     color: #fff;
-    border-radius: 5px;
-    padding: 18px 32px;
+    font-size: 0.875rem;
 }
-.button:hover{
-    background: #0090aa;
+.fo{
+    margin-bottom: 0px;
 }
-.big-bg{
-    background-size: cover; /*화면 꽉채움*/
+
+/* grid */
+.grid{
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+
+.main{
+    text-align: right; 
+    font-weight: bold;
+    padding-bottom: 500px;
+    height: 800px;
+}
+.main h1{
+    font-size: 5.8rem;
+    letter-spacing: -3px;
+    line-height: 100px;
+
+    position: absolute;
+    top: 100px;
+    left: 180px;
+}
+.main h2{
+    font-size: 1.6rem;
+    line-height: 30px;
+
+    position: absolute;
+    top: 370px;
+    left: 100px;
+}
+.main p{
+    font-size: 1rem;
+}
+.i1{
+    position: absolute;
+    top: 370px;
+    left: 430px;
+    object-fit: cover;
+    width: 600px;
+}
+.i2{
+    position: absolute;
+    top: 105px;
+    left: 630px;
+    object-fit: cover;
+    width: 400px;
+}
+.i3{
+    position: absolute;
+    top: 245px;
+    right: 80px;
+    object-fit: cover;
+    width: 400px;
+}
+.i4{
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    object-fit: cover;
+    width: 300px;
+}
+.contant{
+    height: 700px;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
 }
-#home{
-    background-image: url(../images/big-bg.jpg);
-    min-height: 100vh; /*이미지의 높이를 화면 높이만큼 지정*/
+.contant h2{
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    top: 100px;
+    margin-left: 30px;
 }
-#home .page-title{
-    text-transform: none;
+#page1{
+    background-image: url(../images/kpop_img01.png);
+    min-height: 100vh;
+}
+#page2{
+    background-image: url(../images/food.jpg);
+    min-height: 100vh;
+}
+#page3{
+    background-image: url(../images/drama.jpg);
+    min-height: 100vh;
+}
+#page4{
+    background-image: url(../images/it.jpg);
+    min-height: 100vh;
 }
